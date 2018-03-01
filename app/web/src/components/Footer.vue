@@ -14,7 +14,7 @@
       <div class="col-lg-6">
       </div>
       <div class="col-lg-12 credits">
-        CI CD test
+        CI CD test   -failed
       </div>
       <div class="col-lg-6">
       </div>
