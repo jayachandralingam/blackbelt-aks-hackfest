@@ -14,7 +14,7 @@
       <div class="col-lg-6">
       </div>
       <div class="col-lg-12 credits">
-        CI CD test   -failed
+        CI CD testing with Kashti
       </div>
       <div class="col-lg-6">
       </div>
