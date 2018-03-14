@@ -14,7 +14,7 @@
       <div class="col-lg-6">
       </div>
       <div class="col-lg-12 credits">
-        CI CD testing with bridage update
+        CI CD testing with bridage update bit ahead
       </div>
       <div class="col-lg-6">
       </div>
