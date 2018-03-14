@@ -9,7 +9,7 @@ events.on("push", (brigadeEvent, project) => {
     brigConfig.set("acrUsername", project.secrets.acrUsername)
     brigConfig.set("acrPassword", project.secrets.acrPassword)
     brigConfig.set("webImage", "azureworkshop/rating-web")
-    brigConfig.set("gitSHA", brigadeEvent.commit.substr(0,7))
+    brigConfig.set("gitSHA", brigadeEvent.revision.commit.substr(0,7))
     brigConfig.set("eventType", brigadeEvent.type)
     brigConfig.set("branch", getBranch(gitPayload))
     brigConfig.set("imageTag", `${brigConfig.get("branch")}-${brigConfig.get("gitSHA")}`)
@@ -60,7 +60,7 @@ function kubeJobRunner (config, k) {
     k.storage.enabled = false
     k.image = "lachlanevenson/k8s-kubectl:v1.8.2"
     k.tasks = [
-        `kubectl set image deployment/heroes-web-deploy heroes-web-cntnr=sivak8sregistry.azurecr.io/azureworkshop/rating-web:${config.get("imageTag")}`
+        `kubectl set image deployment/heroes-web-deploy heroes-web-cntnr=Sivak8sregistry.azurecr.io/azureworkshop/rating-web:${config.get("imageTag")}`
     ]
 }
 
