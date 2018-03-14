@@ -23,7 +23,7 @@ events.on("push", (brigadeEvent, project) => {
     dockerJobRunner(brigConfig, docker)
     kubeJobRunner(brigConfig, k8s)
     
-6   // start pipeline
+    // start pipeline
     console.log(`==> starting pipeline for docker image: ${brigConfig.get("webACRImage")}:${brigConfig.get("imageTag")}`)
     
     var pipeline = new Group()
@@ -58,7 +58,7 @@ function dockerJobRunner(config, d) {
 
 function kubeJobRunner (config, k) {
     k.storage.enabled = false
-    k.image = "lachlanevenson/k8s-kubectl:v1.8.6"
+    k.image = "lachlanevenson/k8s-kubectl:v1.8.2"
     k.tasks = [
         `kubectl set image deployment/heroes-web-deploy heroes-web-cntnr=Sivak8sregistry.azurecr.io/azureworkshop/rating-web:${config.get("imageTag")}`
     ]
