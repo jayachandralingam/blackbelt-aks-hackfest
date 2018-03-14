@@ -14,7 +14,7 @@
       <div class="col-lg-6">
       </div>
       <div class="col-lg-12 credits">
-        CI CD testing with bridage update bit ahead
+        CI CD testing with bridage update bit ahead imagepullerror
       </div>
       <div class="col-lg-6">
       </div>
